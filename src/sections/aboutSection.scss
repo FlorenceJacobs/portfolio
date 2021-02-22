@@ -1,0 +1,48 @@
+.cv-text{
+    font-size: 1.2rem;
+}
+
+.cv-subtitle{
+    font-size: 1.3rem;
+    color : #83b6b2;
+}
+
+h4.cv-date{
+    font-size: 1.3rem;
+    margin : 0;
+}
+
+.place-cv{
+    margin-bottom : 2rem;
+}
+
+.cv-skill{
+    font-size: 1.5rem;
+    color : #83b6b2;
+}
+.pink-circle{
+    position : relative;
+}
+
+.pink-circle::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    left : -2rem;
+    top:-1rem;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #FFACAC;
+    z-index: -1;
+}
+
+div.row.footer {
+    background-color: #011638;
+    height : 6rem;
+    margin-top : 5rem;
+    margin-bottom : -4rem;
+
+}

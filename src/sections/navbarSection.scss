@@ -1,0 +1,21 @@
+@import '../App.scss';
+
+nav {
+   position: absolute;
+   z-index:100;
+   top: 0em;
+}
+
+div.nav-content.center {
+    display:flex;
+    justify-content:center;
+}
+
+.sidenav {
+    background-color: #A7C4C2;
+}
+
+.menu-link {
+    font-weight: 500;
+    color: $pink;
+}

@@ -1,0 +1,41 @@
+.row.projects-row {
+  padding: 0rem;
+  margin-bottom: 0 !important;
+}
+
+.title-section {
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 5rem;
+  line-height: 7rem;
+}
+
+.title-section::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  left: 0px;
+  top: 0%;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #a6d1ce;
+  z-index: -2;
+}
+
+.title-section::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  left: 3rem;
+  top: 0%;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #FFACAC;
+  z-index: -1;
+}

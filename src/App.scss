@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+$regularFont : 'Fira Sans', sans-serif;
+$titleFont :  'Nova Mono', monospace;
+$blue : #a7c4c2;
+$grey : #757083;
+$pink : #FFACAC;
+
+//8dc8c4
+
+body {
+    margin : 0px;
+    padding : 0px;
+    font-family: $regularFont;
+    font-weight: 200;
+    }
+
+h1, h2, h3, h4 {
+    font-family: $titleFont;
+}
+.strong {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color : black;
+}

@@ -1,0 +1,231 @@
+@import '../App.scss';
+
+//Background animation
+.headerBG {
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top : 0px;
+    z-index: -1;
+  }
+  
+  .headerBubble {
+    width: 100vw;
+    height: 100vh;
+    background: #011638;
+    margin : 0px;
+    padding : 0px;
+  }
+
+  div.headerBubble, div.headerBG{
+    margin : 0px;
+    padding : 0px;
+  }
+    
+  $particleSize: 20vmin;
+  $animationDuration: 100s;
+  $amount: 20;
+  .headerBubble span {
+    width: $particleSize;
+    height: $particleSize;
+    border-radius: $particleSize;
+    backface-visibility: hidden;
+    position: absolute;
+    animation-name: move;
+    animation-duration: $animationDuration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    $colors: (
+      $blue,
+      $grey,
+      $pink
+    );
+    @for $i from 1 through $amount {
+      &:nth-child(#{$i}) {
+        color: nth($colors, random(length($colors)));
+        top: random(100) * 1%;
+        left: random(100) * 1%;
+        animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+        animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+        transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+        $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+        $x: if(random() > 0.5, -1, 1);
+        box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+      }
+    }
+  }
+  
+  @keyframes move {
+    100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+  }
+// End background animation
+
+  .titleHeader {
+    width: 100vw;
+    min-height: 90vh;
+  }
+
+  .titleRow {
+    margin-top : 5rem;
+  }
+
+  img {
+      width: 17rem;
+      background-color: #75708344;
+  }
+
+  .header-presentation {
+    position : relative;
+    font-size: 0.5rem;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+    
+  .slide-text {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    font-size : 1.5rem;
+  }
+// Bubble animation
+  .slide-container {
+    margin-top: 7rem;
+    background-color: #7570836b;
+    width: 40rem;
+    height : 25rem;
+    border-radius: 50%;
+    position : relative;
+    animation: bounce 3s;
+  }
+
+  @keyframes bounce {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1) translateX(1100px); }
+  
+    10% {
+      -webkit-transform: scaleY(0.95) scaleX(1.25);
+      transform: scaleY(0.95) scaleX(1.25); }
+  
+    30% {
+      -webkit-transform: scaleY(1.2) scaleX(0.9);
+      transform: scaleY(1.2) scaleX(0.9); }
+  
+    35% {
+      -webkit-transform: scaleY(0.98) scaleX(1.02);
+      transform: scaleY(0.98) scaleX(1.02); }
+  
+    40% {
+      -webkit-transform: scaleY(1.02) scaleX(0.98);
+      transform: scaleY(1.02) scaleX(0.98); }
+  
+    50% {
+      -webkit-transform: scale(1);
+      transform: scale(1); }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1); }
+  }
+
+  //End Bubble animation
+  
+  .hello {
+    font-size: 1.8rem;
+    font-family: $titleFont;
+  }
+
+//Media Queries
+
+@media screen and (min-width: 200px) and (max-width: 600px) and (orientation: portrait){
+  .headerBubble, .headerBG {
+    height : 121vh;
+  }
+  .titleHeader {
+    min-height: 110vh;
+  }
+  .titleName, .subtitle{
+    text-align: center;
+  }
+  .titleName{
+    font-size: 2.4rem;;
+  }
+  .subtitle{
+    font-size: 1.4rem;;
+  }
+  .header-presentation, .titleRow {
+    margin-top : 3em;
+  }
+  img {
+    width: 14rem;
+  }
+  .slide-text {
+    font-size : 1.1rem;
+  }
+  .slide-container {
+    margin-top: 2rem;
+  }
+  div.row.header-row {
+    margin-bottom: 0em;
+  }
+} 
+@media screen and (min-width: 600px) and (max-width: 920px) and (orientation: portrait){
+  .headerBubble, .headerBG {
+    height : 78vh;
+  }
+  .titleHeader {
+    min-height: 68vh;
+  }
+  .header-presentation, .titleRow {
+    margin-top : 4em;
+  }
+  .slide-text {
+    font-size : 1.1rem;
+  }
+  div.row.header-row {
+    margin-bottom: 0em;
+  }
+}
+
+@media screen and (min-width: 920px) and (max-width: 1280px){
+  .headerBubble, .headerBG {
+    height : 140vh;
+  }
+  .titleHeader {
+    min-height: 130vh;
+  }
+  .titleRow {
+    margin-top : 3rem;
+  }
+  .header-presentation {
+    margin-top : 4em;
+  }
+  .slide-text {
+    font-size : 1.1rem;
+  }
+  .slide-container {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 600px) and (orientation: landscape){
+  .headerBubble, .headerBG {
+    height : 200vh;
+  }
+  .titleHeader {
+    min-height: 190vh;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 920px) and (orientation: landscape){
+  .headerBubble, .headerBG {
+    height : 100vh;
+  }
+  .titleHeader {
+    min-height: 0vh;
+  }
+}
