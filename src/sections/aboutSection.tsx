@@ -94,14 +94,13 @@ const AboutSection : FunctionComponent = () => {
                             <div className="cv-text">As you can see in this Portfolio, I'm confortable with <strong>React, VueJS, Laravel, Git, Bootstrap, Adobe Suite</strong>. I'm still learning, so I hope to expand this list in a few months! Just have a look at my projects here above.</div>
                             <p className="cv-text">I have a car and my driving licence. French is my mother tongue but I can answer you in <strong>English, Spanish or Dutch</strong>.</p>
                         </div>
-                        <div className="col">
+                        <div className="col end-section">
                             <h4 className="cv-skill">Hobbies</h4>
                             <div className="cv-text">I don't see time passing when I'm gardening. And I constantly have projects to create objects or furniture in the corner of my head, like a lamp in an old trumpet or a coat hook made out of neglected toys.</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="row footer"></div>
         </div>
     )
 }

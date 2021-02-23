@@ -4,22 +4,17 @@
 .headerBG {
     margin: 0;
     overflow: hidden;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top : 0px;
     z-index: -1;
   }
   
   .headerBubble {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: #011638;
-    margin : 0px;
-    padding : 0px;
-  }
-
-  div.headerBubble, div.headerBG{
     margin : 0px;
     padding : 0px;
   }
@@ -65,12 +60,12 @@
 // End background animation
 
   .titleHeader {
-    width: 100vw;
-    min-height: 90vh;
+    position : relative;
   }
 
-  .titleRow {
-    margin-top : 5rem;
+  .title-container{
+    padding-top : 4rem;
+    padding-bottom : 2rem;
   }
 
   img {
@@ -144,11 +139,9 @@
 //Media Queries
 
 @media screen and (min-width: 200px) and (max-width: 600px) and (orientation: portrait){
-  .headerBubble, .headerBG {
-    height : 121vh;
-  }
-  .titleHeader {
-    min-height: 110vh;
+  .title-container{
+    padding-top : 1rem;
+    padding-bottom : 1rem;
   }
   .titleName, .subtitle{
     text-align: center;
@@ -159,9 +152,6 @@
   .subtitle{
     font-size: 1.4rem;;
   }
-  .header-presentation, .titleRow {
-    margin-top : 3em;
-  }
   img {
     width: 14rem;
   }
@@ -171,41 +161,27 @@
   .slide-container {
     margin-top: 2rem;
   }
-  div.row.header-row {
-    margin-bottom: 0em;
-  }
 } 
 @media screen and (min-width: 600px) and (max-width: 920px) and (orientation: portrait){
-  .headerBubble, .headerBG {
-    height : 78vh;
+  .title-container{
+    padding-top : 3rem;
+    padding-bottom : 2rem;
   }
-  .titleHeader {
-    min-height: 68vh;
-  }
-  .header-presentation, .titleRow {
-    margin-top : 4em;
+  
+  .header-presentation {
+    margin-top : 3em;
   }
   .slide-text {
     font-size : 1.1rem;
   }
-  div.row.header-row {
-    margin-bottom: 0em;
-  }
 }
 
 @media screen and (min-width: 920px) and (max-width: 1280px){
-  .headerBubble, .headerBG {
-    height : 140vh;
+  .title-container{
+    padding-top : 1.8rem;
+    padding-bottom : 2rem;
   }
-  .titleHeader {
-    min-height: 130vh;
-  }
-  .titleRow {
-    margin-top : 3rem;
-  }
-  .header-presentation {
-    margin-top : 4em;
-  }
+
   .slide-text {
     font-size : 1.1rem;
   }
@@ -213,19 +189,4 @@
     margin-top: 2rem;
   }
 }
-@media screen and (min-width: 200px) and (max-width: 600px) and (orientation: landscape){
-  .headerBubble, .headerBG {
-    height : 200vh;
-  }
-  .titleHeader {
-    min-height: 190vh;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 920px) and (orientation: landscape){
-  .headerBubble, .headerBG {
-    height : 100vh;
-  }
-  .titleHeader {
-    min-height: 0vh;
-  }
-}
+

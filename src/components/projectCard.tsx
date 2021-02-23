@@ -1,7 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import Project from '../models/project';
 import './projectCard.scss';
-import formatDate from '../helpers/formatDate';
 import formatType from '../helpers/formatType';
 
 type Props = {
@@ -32,7 +31,7 @@ const ProjectCard: FunctionComponent<Props> = ({project, borderColor="#dfdfdf"})
                         <div className="hidded">
                             <div className="card-container">
                                 <div>{project.name}</div>
-                                <div className="date-space"><small>{formatDate(project.created)}</small></div>
+                                <div className="date-space"><small>{project.created}</small></div>
                                 <div>
                                 {project.techno.map(tech =>(
                                     <div key={tech} className={formatType(tech)} id="pillule">{tech}</div>

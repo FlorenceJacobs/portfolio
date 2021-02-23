@@ -16,7 +16,7 @@ require("./projectsSection.scss");
 var ProjectsSection = function () {
     var projects = projectsHook_1["default"]();
     return (<div>
-        <h2 className="title-section" id="projects-nav">Projets</h2>
+        <h2 className="title-section" id="projects-nav">Projects</h2>
         <div className="row projects-row">
             {projects.map(function (project) { return (<projectCard_1["default"] key={project.id} project={project}/>); })}
         </div>

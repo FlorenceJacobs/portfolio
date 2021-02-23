@@ -1,4 +1,4 @@
-.contact-row {
+.contact-container {
     display : flex;
     flex-direction: row;
     justify-content: center;
@@ -10,7 +10,10 @@
    color: black;
    font-size: 1.3rem;
    margin-top: 1rem;
-   padding-left : 7rem;
+}
+
+.padd-left {
+    padding-left : 7rem;
 }
 
 .link-contact{
@@ -19,11 +22,11 @@
     font-weight: 300;
 }
 
-.pink-bar {
+.pink-bar, .blue-bar {
     position : relative;
 }
 
-.pink-bar::before {
+.pink-bar::before, .blue-bar::before {
     content: "";
     position: absolute;
     top: 40%;
@@ -32,7 +35,16 @@
     width: 5rem;
 }
 
-.pink-barLinkedIn::before {
+.blue-bar::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: -6rem;
+    border-top: 4px solid #83b6b2;
+    width: 5rem;
+}
+
+.pink-barLinkedIn::before, .blue-barLinkedIn::before  {
     content: "";
     position: absolute;
     top: 0%;
@@ -41,24 +53,49 @@
     width: 5rem;
 }
 
+.textWhite{
+    color : white;
+}
+.blue-barLinkedIn::before  {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -6rem;
+    border-top: 4px solid #83b6b2;
+    width: 5rem;
+}
+
 .pinkbar {
     padding-left : 0.5rem;
     position : relative;
 }
 
-.pink-bar a {
+.pink-bar a, .blue-bar a {
     text-decoration: none;
     color : black;
+}
+
+.blue-bar a {
+    text-decoration: none;
+    color : white;
+}
+.colorFooter{
+    background-color: #011638;
+    height : 6rem;
+    padding-top : 1rem;
+    position : relative;
+    bottom : -20px;
 }
 
 //Media Queries
 
 @media screen and (min-width: 200px) and (max-width: 600px) and (orientation: portrait){
-    .contact-row{
+    .contact-container{
         flex-direction: column;
+        align-items: center;
     }
     .contact-col {
-            font-size: 1rem;
+        font-size: 1rem;
     } 
     .pink-bar::before {
         display:none;
@@ -66,10 +103,13 @@
     .pink-barLinkedIn::before {
         display:none;
     }
+    .padd-left {
+    padding-left : 0rem;
+}
 }
 
 @media screen and (min-width: 600px) and (max-width: 920px) and (orientation: portrait){
-    .contact-row{
+    .contact-container{
         flex-direction: column;
     }
     .contact-col {

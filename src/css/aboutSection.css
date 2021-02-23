@@ -40,9 +40,6 @@ h4.cv-date {
   z-index: -1;
 }
 
-div.row.footer {
-  background-color: #011638;
-  height: 6rem;
-  margin-top: 5rem;
-  margin-bottom: -4rem;
+.end-section {
+  margin-bottom: 3rem;
 }

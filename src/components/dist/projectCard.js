@@ -2,7 +2,6 @@
 exports.__esModule = true;
 var react_1 = require("react");
 require("./projectCard.scss");
-var formatDate_1 = require("../helpers/formatDate");
 var formatType_1 = require("../helpers/formatType");
 var ProjectCard = function (_a) {
     var project = _a.project, _b = _a.borderColor, borderColor = _b === void 0 ? "#dfdfdf" : _b;
@@ -23,7 +22,7 @@ var ProjectCard = function (_a) {
                         <div className="hidded">
                             <div className="card-container">
                                 <div>{project.name}</div>
-                                <div className="date-space"><small>{formatDate_1["default"](project.created)}</small></div>
+                                <div className="date-space"><small>{project.created}</small></div>
                                 <div>
                                 {project.techno.map(function (tech) { return (<div key={tech} className={formatType_1["default"](tech)} id="pillule">{tech}</div>); })}
                                 </div>

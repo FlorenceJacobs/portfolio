@@ -5,7 +5,7 @@ export default class Project {
     picture: string;
     techno: Array<string>;
     link: string;
-    created: Date;
+    created: string;
      
     // 2. Définition des valeurs par défaut des propriétés d'un projet.
     constructor(
@@ -14,7 +14,7 @@ export default class Project {
      picture: string = 'http://...',
      techno: Array<string> = ['Normal'],
      link: string = 'http://...',
-     created: Date = new Date()
+     created: string = 'date'
     ) {
      // 3. Initialisation des propiétés d'un projet.
      this.id = id;

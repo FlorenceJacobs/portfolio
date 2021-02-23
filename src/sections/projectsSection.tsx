@@ -18,7 +18,7 @@ const ProjectsSection : FunctionComponent = () => {
     
  return (
     <div>
-        <h2 className="title-section" id="projects-nav">Projets</h2>
+        <h2 className="title-section" id="projects-nav">Projects</h2>
         <div className="row projects-row">
             {projects.map(project => (
             <ProjectCard key={project.id} project={project}/>

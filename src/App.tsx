@@ -18,7 +18,7 @@ const App: FunctionComponent = () => {
     <div>
         <NavbarSection />
         <HeaderSection />
-        <ContactSection />
+        <ContactSection colorBar="pink-bar" colorBarLinkIn="pink-barLinkedIn pinkbar" colorBg="transparent" colorIcon="material-icons"  colorIconLinkIn="fab fa-2x fa-linkedin" colorIconGithub="fab fa-2x fa-github-square" colorFooter="row" />
         <div className="parallax-container">
             <div className="parallax">
                 <img src="../../assets/bubble_color.jpg" />
@@ -31,6 +31,7 @@ const App: FunctionComponent = () => {
             </div>
         </div>
         <AboutSection />
+        <ContactSection colorBar="blue-bar" colorBarLinkIn="blue-barLinkedIn pinkbar" colorBg="transparent" colorIcon="material-icons textWhite" colorIconLinkIn="fab fa-2x fa-linkedin textWhite" colorIconGithub="fab fa-2x fa-github-square textWhite" colorFooter="row colorFooter" />
     </div>
  )
 }
